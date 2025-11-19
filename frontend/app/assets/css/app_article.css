@@ -1,0 +1,666 @@
+/* === 全局样式 (去除 scoped 以支持 v-html 内部样式) === */
+
+/* 数学公式样式修正 */
+.katex-display {
+  margin: 1em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* 代码块样式 */
+.code-block-wrapper {
+  position: relative;
+  margin: 2em 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fafafa;
+  /* atom-one-light 背景色 */
+  border: 1px solid rgba(70, 113, 187, 0.2);
+}
+
+.code-header-chino {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  background: rgba(70, 113, 187, 0.1);
+  border-bottom-left-radius: 6px;
+  z-index: 2;
+}
+
+.code-language-label {
+  color: #4671bb;
+  padding: 0.3em 0.8em;
+  font-size: 0.75em;
+  font-weight: 600;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.app-copy-btn-chino {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid rgba(70, 113, 187, 0.1);
+  transition: background-color 0.2s;
+}
+
+.app-copy-btn-chino:hover {
+  background-color: rgba(70, 113, 187, 0.2);
+}
+
+.app-copy-btn-chino.copied {
+  background-color: rgba(46, 204, 113, 0.2);
+}
+
+/* 重置 pre 样式，让 highlight.js 接管 */
+.app-article-content-chino pre {
+  margin: 0;
+  padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+  background: transparent;
+
+  /* --- 核心修改开始 --- */
+  overflow-x: auto;
+  /* 开启水平滚动 */
+  max-width: 100%;
+  /* 限制最大宽度，防止撑破父容器 */
+  /* --- 核心修改结束 --- */
+}
+
+.app-article-content-chino pre code {
+  background: transparent !important;
+  /* 确保不覆盖 hljs 背景 */
+  padding: 0;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-size: 0.95em;
+  line-height: 1.6;
+
+  /* --- 核心修改开始 --- */
+  /* 强制代码不换行，确保触发 pre 的滚动条 */
+  white-space: pre;
+  word-wrap: normal;
+  overflow-wrap: normal;
+  /* --- 核心修改结束 --- */
+}
+
+/* 高亮标记 ==text== */
+.app-article-content-chino mark {
+  background-color: #fef3c7;
+  color: #92400e;
+  padding: 0 0.2em;
+  border-radius: 2px;
+}
+
+/* === 全局样式 (去除 scoped 以支持 v-html 内部样式) === */
+
+/* 数学公式样式修正 */
+.katex-display {
+  margin: 1em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* 代码块样式 */
+.code-block-wrapper {
+  position: relative;
+  margin: 2em 0;
+  border-radius: 8px;
+  overflow: hidden;
+  /* 【修改点】：背景色修改为与 blockquote 一致 */
+  background-color: rgba(70, 113, 187, 0.1);
+  border: 1px solid rgba(70, 113, 187, 0.2);
+}
+
+.code-header-chino {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  background: rgba(70, 113, 187, 0.1);
+  border-bottom-left-radius: 6px;
+  z-index: 2;
+}
+
+.code-language-label {
+  color: #4671bb;
+  padding: 0.3em 0.8em;
+  font-size: 0.75em;
+  font-weight: 600;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.app-copy-btn-chino {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid rgba(70, 113, 187, 0.1);
+  transition: background-color 0.2s;
+}
+
+.app-copy-btn-chino:hover {
+  background-color: rgba(70, 113, 187, 0.2);
+}
+
+.app-copy-btn-chino.copied {
+  background-color: rgba(46, 204, 113, 0.2);
+}
+
+/* 重置 pre 样式，让 highlight.js 接管 */
+.app-article-content-chino pre {
+  margin: 0;
+  padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+  background: transparent;
+  overflow-x: auto;
+}
+
+.app-article-content-chino pre code {
+  user-select: text;
+  background: transparent !important;
+  /* 确保不覆盖 hljs 背景 */
+  padding: 0;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+/* 高亮标记 ==text== */
+.app-article-content-chino mark {
+  background-color: #fef3c7;
+  color: #92400e;
+  padding: 0 0.2em;
+  border-radius: 2px;
+}
+
+/* === 主体布局 === */
+.app-article-main-chino {
+  width: 100%;
+  height: calc(100vh - 128px);
+  padding: 2rem 10%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* === 目录 === */
+.app-article-toc-chino {
+  width: 100%;
+  max-width: 1100px;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(70, 113, 187, 0.2);
+  border-radius: 12px;
+  overflow: hidden;
+  background: transparent;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-toc-header-chino {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: rgba(70, 113, 187, 0.05);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-height: 3.5rem;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.app-toc-header-chino:hover {
+  background: rgba(70, 113, 187, 0.1);
+}
+
+.app-toc-title-chino {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4671bb;
+}
+
+.app-toc-icon-chino {
+  font-size: 0.9rem;
+  color: #4671bb;
+  transition: transform 0.3s ease;
+}
+
+.app-toc-content-chino {
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 1rem 1.5rem;
+  background: transparent;
+  opacity: 1;
+  transition: max-height 0.4s cubic-bezier(0, 1, 0, 1), opacity 0.4s ease,
+    padding 0.4s ease;
+}
+
+.app-toc-collapsed-chino {
+  max-height: 0 !important;
+  padding: 0 !important;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.app-toc-content-chino ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.app-toc-content-chino li a {
+  display: block;
+  padding: 0.4rem 0.5rem;
+  color: #4b424c;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.app-toc-content-chino li a:hover {
+  background-color: rgba(70, 113, 187, 0.1);
+  color: #4671bb;
+}
+
+.app-toc-empty-chino {
+  padding: 1rem 1.5rem;
+  color: #b8b3bc;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* === 文章容器 === */
+.app-article-center-container-chino {
+  width: 100%;
+  max-width: 1100px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  flex-shrink: 0;
+}
+
+.app-article-card-chino {
+  background: transparent;
+  border-radius: 20px;
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.app-article-header-chino {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(70, 113, 187, 0.2);
+}
+
+.app-article-title-chino {
+  font-size: 2.8rem;
+  margin: 0 0 1.5rem 0;
+  padding: 0;
+  font-weight: 700;
+  line-height: 1.3;
+  min-height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  word-break: break-word;
+  background: linear-gradient(90deg, #4671bb, #b8b3bc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.app-article-meta-chino {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+}
+
+.app-article-meta-item-chino {
+  padding: 0.4rem 1rem;
+  background-color: rgba(243, 242, 244, 0.8);
+  border-radius: 12px;
+  color: #4671bb;
+  font-weight: 500;
+}
+
+/* === 内容排版 === */
+.app-article-content-section-chino {
+  line-height: 1.9;
+  font-size: 1.05rem;
+  flex: 1;
+  width: 100%;
+  font-weight: 400;
+}
+
+.app-article-content-chino {
+  width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.app-article-content-chino :deep(h1) {
+  margin-top: 2em;
+  color: #4671bb;
+  font-size: 2.2em;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.app-article-content-chino :deep(h2) {
+  margin-top: 2em;
+  color: #4671bb;
+  font-size: 1.8em;
+  font-weight: 600;
+}
+
+.app-article-content-chino :deep(h3) {
+  margin-top: 2em;
+  color: #4671bb;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.app-article-content-chino :deep(p) {
+  margin-bottom: 1.2em;
+  color: #202e62;
+  font-weight: 400;
+}
+
+.app-article-content-chino :deep(strong),
+.app-article-content-chino :deep(b) {
+  color: #4671bb;
+  font-weight: 600;
+}
+
+.app-article-content-chino :deep(ul),
+.app-article-content-chino :deep(ol) {
+  padding-left: 1.5em;
+  margin-bottom: 1.2em;
+  color: #202e62;
+}
+
+.app-article-content-chino :deep(li) {
+  margin-bottom: 0.5em;
+}
+
+.app-article-content-chino :deep(blockquote) {
+  margin: 1.5em 0;
+  padding: 0.8em 1.5em;
+  border-left: 4px solid #4671bb;
+  background-color: rgba(70, 113, 187, 0.1);
+  color: #202e62;
+  border-radius: 0 8px 8px 0;
+}
+
+.app-article-content-chino :deep(img) {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.5em auto;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.app-article-content-chino :deep(.app-clickable-zoom-chino) {
+  cursor: zoom-in;
+}
+
+.app-article-content-chino :deep(.app-clickable-zoom-chino:hover) {
+  transform: scale(1.01);
+}
+
+.app-article-content-chino :deep(a) {
+  color: #4671bb;
+  text-decoration: none;
+  border-bottom: 1px dotted #4671bb;
+  transition: all 0.2s ease;
+}
+
+.app-article-content-chino :deep(a:hover) {
+  border-bottom-style: solid;
+  color: #202e62;
+}
+
+.app-article-content-chino :deep(code:not(pre code)) {
+  background: rgba(70, 113, 187, 0.1);
+  color: #4671bb;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-family: "IBM Plex Mono", Consolas, Monaco, monospace;
+}
+
+/* === 底部导航 === */
+.app-article-navigation-chino {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.app-article-nav-wrapper-chino {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+}
+
+.app-article-nav-link-chino,
+.app-article-nav-placeholder-chino {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background-color: rgba(70, 113, 187, 0.1);
+  border: 1px solid rgba(70, 113, 187, 0.2);
+  border-radius: 16px;
+  text-decoration: none;
+  color: #4b424c;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.app-article-nav-prev-chino {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.app-article-nav-next-chino {
+  flex-direction: row;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.app-article-nav-next-chino .app-article-nav-text-chino {
+  align-items: flex-end;
+}
+
+.app-article-nav-link-chino:hover {
+  transform: translateY(-3px);
+  border-color: #4671bb;
+  background-color: rgba(70, 113, 187, 0.15);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.app-article-nav-placeholder-chino {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.app-article-nav-text-chino {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  flex: 1;
+}
+
+.app-article-nav-prev-chino .app-article-nav-text-chino {
+  text-align: left;
+}
+
+.app-article-nav-label-chino {
+  font-size: 0.8rem;
+  color: #b8b3bc;
+  margin-bottom: 0.2rem;
+}
+
+.app-article-nav-title-chino {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #4671bb;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.app-article-nav-icon-chino {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #b8b3bc;
+  flex-shrink: 0;
+}
+
+.app-article-nav-link-chino:hover .app-article-nav-icon-chino {
+  color: #4671bb;
+}
+
+/* 灯箱 */
+.app-lightbox-overlay-chino {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  cursor: zoom-out;
+}
+
+.app-lightbox-content-chino {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-lightbox-image-chino {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  cursor: default;
+}
+
+.app-lightbox-close-btn-chino {
+  position: absolute;
+  top: -40px;
+  right: -10px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 5px;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.app-lightbox-close-btn-chino:hover {
+  opacity: 1;
+}
+
+.app-lightbox-fade-chino-enter-active,
+.app-lightbox-fade-chino-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.app-lightbox-fade-chino-enter-from,
+.app-lightbox-fade-chino-leave-to {
+  opacity: 0;
+}
+
+.app-article-loading-placeholder-chino {
+  text-align: center;
+  padding: 3rem;
+  color: #b8b3bc;
+  height: 200px;
+}
+
+.app-toc-placeholder-chino {
+  animation: pulse 1.5s infinite;
+}
+
+.app-toc-placeholder-item-chino {
+  height: 0.9rem;
+  background: rgba(70, 113, 187, 0.1);
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .app-article-main-chino {
+    padding: 1rem 2%;
+  }
+
+  .app-article-navigation-chino {
+    flex-direction: column;
+  }
+
+  .app-article-nav-next-chino {
+    text-align: left;
+    justify-content: space-between;
+  }
+
+  .app-article-nav-next-chino .app-article-nav-text-chino {
+    align-items: flex-start;
+  }
+
+  .app-article-card-chino {
+    padding: 1.5rem;
+  }
+
+  .app-lightbox-close-btn-chino {
+    top: -40px;
+    right: 0;
+  }
+
+  .app-article-title-chino {
+    font-size: 2rem;
+  }
+}

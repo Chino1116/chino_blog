@@ -1,0 +1,78 @@
+.app-nav-chino {
+  display: grid;
+  /* 水平方向居中整个网格 */
+  justify-content: center;
+  grid-template-columns: 1.5fr 1fr 2fr 0.5fr;
+  /* 让整个导航栏在垂直方向上居中 */
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.app-nav-title-chino {
+  margin: 0 40px;
+  padding: 0;
+  font-size: 20px;
+  font-weight: bold;
+  display: grid;
+  /* 改为两列，让图片和文本并排 */
+  grid-template-columns: auto 1fr;
+  /* 关键：让图片和文本在垂直方向上居中对齐 */
+  align-items: center;
+  gap: 8px; /* 在图片和文本之间添加一点间距 */
+}
+
+.app-nav-search-chino {
+  display: grid;
+  /* 将搜索框和按钮放在一行 */
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 8px;
+}
+
+.app-nav-menu-chino {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  /* 关键：让菜单链接在垂直方向上居中对齐 */
+  align-items: center;
+  gap: 8px;
+  justify-self: end;
+  padding: 0 40px;
+  text-align: center;
+}
+
+.app-nav-social-chino {
+  display: grid;
+  padding: 0 20px;
+  grid-template-columns: auto auto auto;
+  /* 垂直方向居中 */
+  align-items: center;
+  text-align: center;
+}
+
+.app-nav-social-chino a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 竖屏移动端适配长宽小于1:1 */
+@media (max-aspect-ratio: 1/1) {
+  .app-nav-chino {
+    width: 100%;
+    grid-template-columns: 1.5fr 0.2fr 0.5fr;
+  }
+  .app-nav-title-chino {
+    margin: 0 20px;
+  }
+  /* .app-nav-search-chino{
+    display: none;
+  } */
+  .app-nav-menu-chino {
+    display: none;
+  }
+  .app-nav-social-chino {
+    padding: 0 10px;
+    gap: 2px;
+  }
+}

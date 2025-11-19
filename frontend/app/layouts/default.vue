@@ -1,0 +1,42 @@
+<template>
+    <div class="app-container-chino">
+        <!-- 导航栏 -->
+        <AppNav />
+        <!-- 页面插槽 -->
+        <slot />
+        <!-- 工具栏 -->
+        <AppTools />
+        <!-- 页脚 -->
+        <AppFooter />
+    </div>
+</template>
+
+<style>
+/* 布局容器 */
+.app-container-chino {
+    display: grid;
+    /* 垂直一列 */
+    grid-template-columns: 1fr;
+    /* 水平两行 */
+    grid-template-rows: 64px 1fr;
+}
+
+/* 背景图片 */
+.app-container-chino::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("~/assets/img/chino_bg.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.1;
+    /* 调整透明度 */
+    z-index: -1;
+    /* 确保伪元素在内容之下 */
+}
+</style>
