@@ -2,10 +2,7 @@
 
 # 声明
 
-1.智乃博客样式设计灵感以及动力都来源于 [KUN's Blog](https://soft.moe/) ，但并未直接复制代码，都是凭我的感觉加上个人的一点审美丢给 AI 设计的。<br> 2.这是一个<font color="red">个人理解 + AI</font>产出的项目，乱七八糟的代码请谅解。也只是一个只花了两天半搓出来的半成品，并不好用。<br> 3.或许会有人喜欢所以我选择开源。<br> 4.若您处于任何原因不喜欢本项目请离开，喜欢的话可以给我个 STAR，也可以根据本文档后面部分自行部署使用。<br> 5.第一次写 Markdown 文档必然是不好看懂的。
-
-#
-
+0.本项目禁止商业使用（不会有人用但依旧要说）。<br> 1.智乃博客样式设计灵感以及动力都来源于 [KUN's Blog](https://soft.moe/) ，但并未直接复制代码，都是凭我的感觉加上个人的一点审美丢给 AI 设计的。<br> 2.这是一个<font color="red">个人理解 + AI</font>产出的项目，乱七八糟的代码请谅解。也只是一个只花了两天半搓出来的半成品，并不好用。<br> 3.或许会有人喜欢所以我选择开源。<br> 4.若您处于任何原因不喜欢本项目请离开，喜欢的话可以给我个 STAR，也可以根据本文档后面部分自行部署使用。<br> 5.第一次写 Markdown 文档必然是不好看懂的。
 [![image](https://img.cdn1.vip/i/691d8b2dbfdd8_1763543853.webp)](https://github.com/Chino1116/chino_blog)
 
 # <font color="#4671bb">智乃的博客</font>
@@ -69,7 +66,7 @@ node .output/server/index.mjs
 
 ## 注意
 
-在后端 route 文件夹下 admin.py 内的如下代码位置修改博客后台密码
+在后端 route 文件夹下 admin.py 内的如下代码位置修改博客后台密码。
 
 ```python
 # 后台密钥（建议后续可从环境变量或配置文件读取）
@@ -104,6 +101,6 @@ python3 chino.py
 
 ## 都看到这里了想必你一定对本项目有兴趣，请点个免费的 Star 吧！
 
-<!-- - Star 趋势  [![GitHub stars](https://img.shields.io/github/stars/mirai-mamori/Sakurairo?logo=github&style=social)](https://github.com/mirai-mamori/Sakurairo/stargazers)
+### Star 趋势
 
-[![Stargazers over time](https://starchart.cc/mirai-mamori/Sakurairo.svg)](https://github.com/mirai-mamori/Sakurairo/stargazers) -->
+[![Star History Chart](https://api.star-history.com/svg?repos=Chino1116/chino_blog&type=date&legend=top-left)](https://www.star-history.com/#Chino1116/chino_blog&type=date&legend=top-left)
