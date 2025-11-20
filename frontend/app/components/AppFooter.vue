@@ -1,7 +1,7 @@
 <template>
     <div class="app-footer-chino">
         <p>Copyright © 2025 CHINO's Blog. All Rights Reserved.</p>
-        <p>Designed by <a href="/">CHINO</a></p>
+        <p>Designed by <a href="/">CHINO</a>. Refer to <a href="https://soft.moe" target="_blank">KUN's Blog</a>.</p>
         <!-- <p>Frontend Build by<a href="https://nuxt.com">Nuxt</a></p> -->
     </div>
 </template>

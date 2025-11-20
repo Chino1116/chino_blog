@@ -35,4 +35,5 @@ a:active {
 /* Firefox滚动条样式 */
 * {
   scrollbar-width: none;
+  box-sizing: border-box;
 }

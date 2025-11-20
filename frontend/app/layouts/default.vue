@@ -1,4 +1,6 @@
 <template>
+    <div class="app-background-chino">
+    </div>
     <div class="app-container-chino">
         <!-- 导航栏 -->
         <AppNav />
@@ -22,7 +24,7 @@
 }
 
 /* 背景图片 */
-.app-container-chino::before {
+.app-background-chino::before {
     content: "";
     position: absolute;
     top: 0;

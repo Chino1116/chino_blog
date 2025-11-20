@@ -5,8 +5,8 @@
             CHINO's Blog
         </nuxt-link>
 
-        <div class="app-nav-search-chino">
-        </div>
+        <!-- <div class="app-nav-search-chino">
+        </div> -->
 
         <div class="app-nav-menu-chino desktop-only-chino" :style="menuGridStyle">
             <template v-if="menuItems && menuItems.length > 0">
@@ -14,18 +14,10 @@
                     {{ item.name }}
                 </nuxt-link>
             </template>
-            <template v-else>
-                <nuxt-link to="/">Home</nuxt-link>
-                <nuxt-link to="/blog">Blog</nuxt-link>
-                <nuxt-link to="/project">Project</nuxt-link>
-                <nuxt-link to="/vps">Vps</nuxt-link>
-                <nuxt-link to="/about">About</nuxt-link>
-                <nuxt-link to="/contact">Friends</nuxt-link>
-            </template>
         </div>
 
         <div class="app-nav-social-chino desktop-only-chino">
-            <a href="https://github.com/" target="_blank">
+            <a href="https://github.com/Chino1116/chino_blog" target="_blank">
                 <svg t="1763467732067" class="icon" viewBox="0 0 1024 1024" version="1.1"
                     xmlns="http://www.w3.org/2000/svg" p-id="28261" width="20" height="20">
                     <path
@@ -49,24 +41,22 @@
                         fill="#4671bb"></path>
                 </svg>
             </a>
-
-            <div class="app-nav-theme-switch-chino" :class="{ 'app-nav-is-dark-chino': isDarkMode }"
-                @click="toggleTheme">
-                <div class="app-nav-theme-handle-chino">
-                    <svg v-if="!isDarkMode" viewBox="0 0 1024 1024" width="12" height="12">
-                        <path
-                            d="M512 768a256 256 0 1 1 0-512 256 256 0 0 1 0 512z m0-85.333333a170.666667 170.666667 0 1 0 0-341.333334 170.666667 170.666667 0 0 0 0 341.333334zM469.333333 42.666667h85.333334v128h-85.333334V42.666667z m0 810.666666h85.333334v128h-85.333334v-128zM149.973333 210.304l60.330667-60.330667L300.8 240.469333 240.469333 300.8 149.973333 210.346667zM723.2 783.530667l60.330667-60.330667 90.496 90.496-60.330667 60.330667-90.496-90.496z m90.496-633.6l60.330667 60.373333-90.496 90.496-60.330667-60.330667 90.496-90.496zM240.469333 723.2l60.330667 60.330667-90.496 90.496-60.330667-60.330667 90.496-90.496zM981.333333 469.333333v85.333334h-128v-85.333334h128zM170.666667 469.333333v85.333334H42.666667v-85.333334h128z"
-                            p-id="27622" fill="#4671bb"></path>
-                    </svg>
-                    <svg v-else viewBox="0 0 1024 1024" width="12" height="12">
-                        <path
-                            d="M485.546667 86.144a320 320 0 1 0 452.266666 452.266667C924.245333 761.770667 738.816 938.666667 512.042667 938.666667 276.352 938.666667 85.333333 747.648 85.333333 512c0-226.773333 176.896-412.202667 400.213334-425.856z"
-                            fill="#4671bb"></path>
-                    </svg>
-                </div>
+        </div>
+        <div class="app-nav-theme-switch-chino desktop-only-chino" :class="{ 'app-nav-is-dark-chino': isDarkMode }"
+            @click="toggleTheme">
+            <div class="app-nav-theme-handle-chino">
+                <svg v-if="!isDarkMode" viewBox="0 0 1024 1024" width="12" height="12">
+                    <path
+                        d="M512 768a256 256 0 1 1 0-512 256 256 0 0 1 0 512z m0-85.333333a170.666667 170.666667 0 1 0 0-341.333334 170.666667 170.666667 0 0 0 0 341.333334zM469.333333 42.666667h85.333334v128h-85.333334V42.666667z m0 810.666666h85.333334v128h-85.333334v-128zM149.973333 210.304l60.330667-60.330667L300.8 240.469333 240.469333 300.8 149.973333 210.346667zM723.2 783.530667l60.330667-60.330667 90.496 90.496-60.330667 60.330667-90.496-90.496z m90.496-633.6l60.330667 60.373333-90.496 90.496-60.330667-60.330667 90.496-90.496zM240.469333 723.2l60.330667 60.330667-90.496 90.496-60.330667-60.330667 90.496-90.496zM981.333333 469.333333v85.333334h-128v-85.333334h128zM170.666667 469.333333v85.333334H42.666667v-85.333334h128z"
+                        p-id="27622" fill="#4671bb"></path>
+                </svg>
+                <svg v-else viewBox="0 0 1024 1024" width="12" height="12">
+                    <path
+                        d="M485.546667 86.144a320 320 0 1 0 452.266666 452.266667C924.245333 761.770667 738.816 938.666667 512.042667 938.666667 276.352 938.666667 85.333333 747.648 85.333333 512c0-226.773333 176.896-412.202667 400.213334-425.856z"
+                        fill="#4671bb"></path>
+                </svg>
             </div>
         </div>
-
         <div class="app-nav-mobile-toggle-chino mobile-only-chino" @click="toggleMobileMenu">
             <svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="25928"
                 width="24" height="24">
@@ -83,23 +73,9 @@
                     <div class="mobile-menu-list-chino">
                         <template v-if="menuItems && menuItems.length > 0">
                             <nuxt-link v-for="item in menuItems" :key="item.id" :to="item.route"
-                                class="mobile-menu-item-chino" @click="isMobileMenuOpen = false">
+                                class="app-mobile-menu-item-chino" @click="isMobileMenuOpen = false">
                                 {{ item.name }}
                             </nuxt-link>
-                        </template>
-                        <template v-else>
-                            <nuxt-link to="/" class="mobile-menu-item-chino"
-                                @click="isMobileMenuOpen = false">Home</nuxt-link>
-                            <nuxt-link to="/blog" class="mobile-menu-item-chino"
-                                @click="isMobileMenuOpen = false">Blog</nuxt-link>
-                            <nuxt-link to="/project" class="mobile-menu-item-chino"
-                                @click="isMobileMenuOpen = false">Project</nuxt-link>
-                            <nuxt-link to="/vps" class="mobile-menu-item-chino"
-                                @click="isMobileMenuOpen = false">Vps</nuxt-link>
-                            <nuxt-link to="/about" class="mobile-menu-item-chino"
-                                @click="isMobileMenuOpen = false">About</nuxt-link>
-                            <nuxt-link to="/contact" class="mobile-menu-item-chino"
-                                @click="isMobileMenuOpen = false">Friends</nuxt-link>
                         </template>
                     </div>
 
@@ -241,7 +217,7 @@ import { useFetch, useCookie } from '#app'
 const { data: menuItems } = await useFetch('http://localhost:8000/category')
 
 const menuGridStyle = computed(() => {
-    const count = menuItems.value?.length || 6
+    const count = menuItems.value?.length
     return {
         gridTemplateColumns: `repeat(${count}, 1fr)`
     }
@@ -255,18 +231,51 @@ const isMobileMenuOpen = ref(false)
 const colorMode = useCookie('chino-color-mode', { default: () => 'light', maxAge: 60 * 60 * 24 * 365 })
 const isDarkMode = computed(() => colorMode.value === 'dark')
 
-// 3. 应用主题函数 (操作 CSS Filter)
+// 3. 应用主题函数 (优化滤镜参数版)
 const applyTheme = () => {
     if (process.client) {
         const html = document.documentElement;
+        // 1. 获取背景图片元素
+        const bgElement = document.querySelector('.app-background-chino');
+
         if (colorMode.value === 'dark') {
-            html.style.filter = 'invert(1) hue-rotate(180deg)';
-            // 防止图片、视频等媒体内容被反转成底片，需要再次反转
-            // 我们通过 CSS 类来控制这个行为，这里确保全局样式生效
+            // --- 父元素 (全局) 滤镜 ---
+            html.style.filter = 'invert(0.95) hue-rotate(180deg) brightness(0.9) contrast(0.9)';
+
             html.classList.add('is-dark-mode-global');
+            html.style.colorScheme = 'dark';
+
+            // --- 关键修复开始 ---
+
+            // A. 防止背景图片消失：强制让 body 背景透明
+            // 原因：html 反色后，body 默认的白色背景会变成不透明的深灰色，可能盖住位于底层的背景图。
+            document.body.style.backgroundColor = 'transparent';
+
+            // B. 还原背景图片颜色：负负得正
+            if (bgElement) {
+                // 再次反转 0.95 + 旋转 180度 = 还原颜色
+                // 亮度/对比度放大 1.11倍 (1/0.9) = 抵消变暗
+                bgElement.style.filter = 'invert(0.95) hue-rotate(180deg) brightness(1.11) contrast(1.11)';
+
+                // 强制开启 GPU 硬件加速，防止滤镜导致的渲染层级丢失
+                bgElement.style.transform = 'translateZ(0)';
+            }
+            // --- 关键修复结束 ---
+
         } else {
+            // --- 恢复正常模式 ---
             html.style.filter = '';
             html.classList.remove('is-dark-mode-global');
+            html.style.colorScheme = '';
+
+            // 清除 body 的强制透明
+            document.body.style.backgroundColor = '';
+
+            // 清除背景图的滤镜
+            if (bgElement) {
+                bgElement.style.filter = '';
+                bgElement.style.transform = '';
+            }
         }
     }
 }
@@ -345,9 +354,9 @@ const showShareTip = (message) => {
 .app-nav-chino {
     display: grid;
     justify-content: center;
-    grid-template-columns: 1.5fr 1fr 2fr 0.5fr;
+    grid-template-columns: 3fr 3fr 0.5fr 0.2fr;
     align-items: center;
-    width: 80%;
+    width: 82%;
     margin: 0 auto;
     /* 确保导航栏在最上层 */
     position: relative;
@@ -355,7 +364,7 @@ const showShareTip = (message) => {
 }
 
 .app-nav-title-chino {
-    margin: 0 40px;
+    margin: 0;
     padding: 0;
     font-size: 20px;
     font-weight: bold;
@@ -378,7 +387,7 @@ const showShareTip = (message) => {
     align-items: center;
     gap: 8px;
     justify-self: end;
-    padding: 0 40px;
+    padding: 0 20px;
     text-align: center;
 }
 
@@ -389,6 +398,22 @@ const showShareTip = (message) => {
     justify-content: flex-end;
     gap: 12px;
     padding: 0 20px;
+}
+
+.app-nav-social-chino::before {
+    content: '';
+    width: 1px;
+    height: 20px;
+    background-color: #4671bb;
+    margin-right: 12px;
+}
+
+.app-nav-social-chino::after {
+    content: '';
+    width: 1px;
+    height: 20px;
+    background-color: #4671bb;
+    margin-left: 12px;
 }
 
 .app-nav-social-chino a,
@@ -454,8 +479,9 @@ const showShareTip = (message) => {
 @media (max-aspect-ratio: 1/1) {
     .app-nav-chino {
         width: 100%;
+        padding: 0 10px;
         /* 调整Grid：Logo - Search(Hidden/Small) - MenuToggle */
-        grid-template-columns: 1.5fr 0.2fr 0.5fr;
+        grid-template-columns: 3fr 0.5fr;
     }
 
     .app-nav-title-chino {
@@ -498,10 +524,10 @@ const showShareTip = (message) => {
 
     /* 上部分：半透明菜单面板 */
     .app-nav-mobile-menu-panel-chino {
-        background: rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.8) !important;
         /* 0.2 透明度 */
-        backdrop-filter: blur(6px);
-        -webkit-backdrop-filter: blur(6px);
+        backdrop-filter: blur(1px) !important;
+        -webkit-backdrop-filter: blur(1px) !important;
         /* border-bottom-left-radius: 24px;
         border-bottom-right-radius: 24px; */
         padding: 20px;
@@ -528,7 +554,7 @@ const showShareTip = (message) => {
         width: 100%;
     }
 
-    .mobile-menu-item-chino {
+    .app-mobile-menu-item-chino {
         padding: 15px 0;
         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         font-size: 16px;
@@ -537,7 +563,7 @@ const showShareTip = (message) => {
         display: block;
     }
 
-    .mobile-menu-item-chino:last-child {
+    .app-mobile-menu-item-chino:last-child {
         border-bottom: none;
     }
 

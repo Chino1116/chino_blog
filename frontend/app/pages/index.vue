@@ -4,13 +4,13 @@
             <h1>CHINO's Blog</h1>
             <h2>CHINO's moe blog, CHINO IS THE CUTEST!</h2>
             <p>Kafuu Chino, the cutest girl in the world!</p>
-            <div class="nav-buttons">
-                <nuxt-link to="/article/1" class="app-main-button-chino active">示例</nuxt-link>
-                <nuxt-link to="/blog" class="app-main-button-chino">Blog</nuxt-link>
-                <nuxt-link to="/project" class="app-main-button-chino">Project</nuxt-link>
-                <nuxt-link to="/vps" class="app-main-button-chino">Vps</nuxt-link>
-                <nuxt-link to="/about" class="app-main-button-chino">About</nuxt-link>
-                <nuxt-link to="/friends" class="app-main-button-chino">Friends</nuxt-link>
+            <div class="app-main-links-buttons-chino">
+                <nuxt-link to="/article/1" class="app-main-button-chino active">Example</nuxt-link>
+                <nuxt-link to="/category/blog" class="app-main-button-chino">Blog</nuxt-link>
+                <nuxt-link to="/category/project" class="app-main-button-chino">Project</nuxt-link>
+                <nuxt-link to="/category/vps" class="app-main-button-chino">Vps</nuxt-link>
+                <nuxt-link to="/category/about" class="app-main-button-chino">About</nuxt-link>
+                <nuxt-link to="/category/friends" class="app-main-button-chino">Friends</nuxt-link>
             </div>
         </div>
         <div class="app-main-image-chino">
@@ -22,7 +22,8 @@
 <style>
 .app-main-chino {
     display: grid;
-    padding: 50px 16%;
+    padding: 50px 12%;
+    gap: 40px;
     width: 100%;
     height: calc(100vh - 128px);
     margin: 0 auto;
@@ -31,14 +32,12 @@
         "title image"
         "buttons buttons";
     overflow-y: auto;
-    /* 添加垂直滚动 */
-    box-sizing: border-box;
-    /* 确保padding包含在宽度内 */
 }
 
 .app-main-title-chino {
     grid-area: title;
     height: 70%;
+    margin: 20px;
 }
 
 .app-main-title-chino h1 {
@@ -70,6 +69,7 @@
     grid-area: image;
     min-width: 190px;
     height: 70%;
+    padding: 20px;
 }
 
 .app-main-image-chino img {
@@ -79,29 +79,28 @@
 }
 
 /* 导航按钮容器 */
-.nav-buttons {
-    grid-area: buttons;
-    display: flex;
-    gap: 40px;
-    margin-top: 30px;
-    flex-wrap: wrap;
+.app-main-links-buttons-chino {
+    display: grid;
+    margin: 50px 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
     justify-content: center;
 }
 
 /* 导航按钮基础样式 */
 .app-main-button-chino {
-    padding: 10px 24px;
+    padding: 8px 10px;
     border-radius: 20px;
     text-decoration: none;
     font-size: 16px;
     font-weight: 500;
     transition: all 0.3s ease;
     border: 1px solid #4671bb;
-    background-color: #f3f2f4;
+    /* 背景半透明 */
+    background-color: rgba(70, 113, 187, 0.1);
     color: #4671bb;
-    display: inline-block;
     text-align: center;
-    min-width: 100px;
+    width: 100%;
 }
 
 /* 激活状态按钮 */
@@ -127,6 +126,7 @@
 @media (max-aspect-ratio: 1/1) {
     .app-main-chino {
         padding: 20px 5%;
+        gap: 0;
         grid-template-columns: 1fr;
         grid-template-areas:
             "image"
@@ -135,6 +135,7 @@
     }
 
     .app-main-image-chino {
+        margin: auto 0;
         padding: 0 15%;
     }
 
@@ -149,6 +150,11 @@
 
     .app-main-title-chino p {
         font-size: 20px;
+    }
+
+    .app-main-links-buttons-chino {
+        grid-template-columns: 1fr 1fr;
+        margin: 30px 20px;
     }
 }
 </style>
