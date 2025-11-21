@@ -5,25 +5,25 @@
                 {{ id ? capitalizeFirstLetter(id) : 'Category' }}
             </h1>
             <p class="app-category-subtitle-chino">
-                共找到 {{ totalArticles }} 篇相关文章
+                {{ totalArticles }} Related Article Found.
             </p>
         </header>
 
         <div class="app-article-center-container-chino">
             <div v-if="error" class="app-article-error-chino">
-                <h2>加载失败</h2>
+                <h2>Load Failed.</h2>
                 <p>{{ error.message }}</p>
-                <button @click="refresh" class="app-retry-btn-chino">重试</button>
+                <button @click="refresh" class="app-retry-btn-chino">Retry.</button>
             </div>
 
             <div v-else-if="pending" class="app-article-loading-placeholder-chino">
                 <div class="loading-spinner-chino"></div>
-                <p>正在加载文章列表...</p>
+                <p>Loading Article List...</p>
             </div>
 
             <div v-else-if="allArticles.length === 0" class="app-article-error-chino">
-                <h2>暂无文章</h2>
-                <p>该分类下暂时还没有发布文章。</p>
+                <h2>No Article Available.</h2>
+                <p>There Are No Articles Published In This Category Yet.</p>
             </div>
 
             <div v-else class="app-article-list-chino">
@@ -50,7 +50,7 @@
                             <div class="app-category-meta-footer-chino">
                                 <div class="app-category-badges-chino">
                                     <span class="app-category-badge-chino app-category-badge-blue-chino">
-                                        更新于 {{ formatTimeSimple(article.update_time) }}
+                                        Updated On {{ formatTimeSimple(article.update_time) }}
                                     </span>
                                     <span class="app-category-badge-chino app-category-badge-light-chino">
                                         ID: {{ article.id }}
@@ -68,9 +68,9 @@
                 </TransitionGroup>
 
                 <div ref="loadTrigger" class="app-scroll-trigger-chino">
-                    <span v-if="isLoadingMore">加载更多...</span>
+                    <span v-if="isLoadingMore">Load More...</span>
                     <span v-else-if="!hasMore && displayedArticles.length > 0" class="no-more-text-chino">
-                        - 已经到底啦 -
+                        - You've Reached The Bottom -
                     </span>
                 </div>
             </div>

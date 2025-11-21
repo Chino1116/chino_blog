@@ -4,8 +4,8 @@
     <div class="app-error-chino">
       <img src="~/assets/img/chino.png" alt="智乃" />
       <h1>{{ error.statusCode }}</h1>
-      <p>你是不是迷路啦？智乃这里什么都没有哎</p>
-      <NuxtLink to="/">回到原点吧</NuxtLink>
+      <p>Are You Lost? There's Nothing Here At Chino's Blog.</p>
+      <NuxtLink to="/">Let's Go Back To The Starting Point.</NuxtLink>
     </div>
   </NuxtLayout>
 </template>

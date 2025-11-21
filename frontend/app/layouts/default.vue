@@ -24,7 +24,7 @@
 }
 
 /* 背景图片 */
-.app-background-chino::before {
+.app-background-chino {
     content: "";
     position: absolute;
     top: 0;

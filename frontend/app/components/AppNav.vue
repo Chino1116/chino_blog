@@ -4,10 +4,8 @@
             <img src="~/assets/img/chino.png" alt="Chino's Blog" width="36" height="36">
             CHINO's Blog
         </nuxt-link>
-
         <!-- <div class="app-nav-search-chino">
         </div> -->
-
         <div class="app-nav-menu-chino desktop-only-chino" :style="menuGridStyle">
             <template v-if="menuItems && menuItems.length > 0">
                 <nuxt-link v-for="item in menuItems" :key="item.id" :to="item.route">
@@ -15,7 +13,6 @@
                 </nuxt-link>
             </template>
         </div>
-
         <div class="app-nav-social-chino desktop-only-chino">
             <a href="https://github.com/Chino1116/chino_blog" target="_blank">
                 <svg t="1763467732067" class="icon" viewBox="0 0 1024 1024" version="1.1"
@@ -25,7 +22,6 @@
                         p-id="28262" fill="#4671bb"></path>
                 </svg>
             </a>
-
             <a href="https://www.bilibili.com/" target="_blank">
                 <svg class="icon" viewBox="0 0 1024 1024" width="20" height="20">
                     <path
@@ -33,7 +29,6 @@
                         fill="#4671bb"></path>
                 </svg>
             </a>
-
             <a href="javascript:void(0)" @click="showShareModal = true">
                 <svg class="icon" viewBox="0 0 1024 1024" width="20" height="20">
                     <path
@@ -65,10 +60,8 @@
                     p-id="25929" fill="#4671bb"></path>
             </svg>
         </div>
-
         <transition name="fade">
             <div v-if="isMobileMenuOpen" class="app-nav-mobile-layout-chino mobile-only-chino">
-
                 <div class="app-nav-mobile-menu-panel-chino">
                     <div class="mobile-menu-list-chino">
                         <template v-if="menuItems && menuItems.length > 0">
@@ -78,7 +71,6 @@
                             </nuxt-link>
                         </template>
                     </div>
-
                     <div class="mobile-appearance-section-chino">
                         <div class="appearance-box-chino">
                             <span>Appearance</span>
@@ -99,9 +91,8 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="mobile-social-icons-chino">
-                        <a href="https://github.com/" target="_blank">
+                        <a href="https://github.com/Chino1116/chino_blog" target="_blank">
                             <svg t="1763467732067" class="icon" viewBox="0 0 1024 1024" version="1.1"
                                 xmlns="http://www.w3.org/2000/svg" p-id="28261" width="24" height="24">
                                 <path
@@ -125,15 +116,13 @@
                         </a>
                     </div>
                 </div>
-
                 <div class="app-nav-mobile-mask-rest-chino" @click="isMobileMenuOpen = false"></div>
             </div>
         </transition>
-
         <div v-if="showShareModal" class="app-nav-share-modal-chino" @click="showShareModal = false">
             <div class="app-nav-share-container-chino" @click.stop>
                 <div class="app-nav-share-header-chino">
-                    <h3>分享到</h3>
+                    <h3>Share To</h3>
                     <button class="app-nav-share-close-chino" @click="showShareModal = false">×</button>
                 </div>
                 <div class="app-nav-share-content-chino">
@@ -153,13 +142,13 @@
                                 <svg viewBox="0 0 1024 1024" width="32" height="32">
                                     <path
                                         d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
-                                        fill="#b8b3bc" />
+                                        fill="#4671bb" />
                                     <path
                                         d="M512 336c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176z"
-                                        fill="#b8b3bc" />
+                                        fill="#4671bb" />
                                 </svg>
                             </div>
-                            <span>QQ空间</span>
+                            <span>Qzone</span>
                         </div>
                         <div class="app-nav-share-item-chino" @click="shareToWeibo">
                             <div class="app-nav-share-icon-chino app-nav-share-weibo-chino">
@@ -169,38 +158,39 @@
                                         fill="#4671bb"></path>
                                 </svg>
                             </div>
-                            <span>微博</span>
+                            <span>Weibo</span>
                         </div>
                         <div class="app-nav-share-item-chino" @click="shareToWechat">
                             <div class="app-nav-share-icon-chino app-nav-share-wechat-chino">
                                 <svg class="icon" viewBox="0 0 1024 1024" width="32" height="32">
                                     <path
                                         d="M369.792 491.136a54.442667 54.442667 0 0 1-54.826667-54.826667c0-30.634667 24.192-54.869333 54.826667-54.869333 30.592 0 54.826667 24.234667 54.826667 54.869333 0 30.592-24.234667 54.826667-54.826667 54.826667z m284.416 0a54.442667 54.442667 0 0 1-54.826667-54.826667c0-30.634667 24.234667-54.869333 54.826667-54.869333 30.634667 0 54.826667 24.234667 54.826667 54.869333 0 30.592-24.192 54.826667-54.826667 54.826667z m-363.093333 328.704l30.506666-18.602667a170.666667 170.666667 0 0 1 115.413334-22.869333c9.045333 1.408 16.469333 2.517333 22.186666 3.242667 17.322667 2.304 34.986667 3.456 52.778667 3.456 188.586667 0 337.066667-128.938667 337.066667-281.6S700.586667 221.866667 512 221.866667s-337.066667 128.938667-337.066667 281.6c0 58.282667 21.333333 114.048 61.098667 161.322666 2.048 2.432 5.12 5.845333 9.130667 10.026667a170.666667 170.666667 0 0 1 46.976 132.352l-1.066667 12.672z m-26.88 116.352a42.666667 42.666667 0 0 1-65.152-39.68l8.021333-96.426667a85.333333 85.333333 0 0 0-23.466667-66.176A298.368 298.368 0 0 1 170.666667 719.701333c-50.944-60.629333-81.066667-135.381333-81.066667-216.234666 0-202.666667 189.098667-366.933333 422.4-366.933334s422.4 164.266667 422.4 366.933333-189.098667 366.933333-422.4 366.933333c-21.76 0-43.093333-1.408-63.957333-4.181333a1007.36 1007.36 0 0 1-24.277334-3.584 85.333333 85.333333 0 0 0-57.728 11.434666l-101.845333 62.122667z"
-                                        fill="#4b424c"></path>
+                                        fill="#4671bb"></path>
                                 </svg>
                             </div>
-                            <span>微信</span>
+                            <span>Wechat</span>
                         </div>
                         <div class="app-nav-share-item-chino" @click="shareToMoments">
                             <div class="app-nav-share-icon-chino app-nav-share-moments-chino">
                                 <svg viewBox="0 0 1024 1024" width="32" height="32">
                                     <path
                                         d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
-                                        fill="#4b424c" />
-                                    <circle cx="512" cy="512" r="120" fill="#4b424c" />
+                                        fill="#4671bb" />
+                                    <circle cx="512" cy="512" r="120" fill="#4671bb" />
                                 </svg>
                             </div>
-                            <span>朋友圈</span>
+                            <span>Moments</span>
                         </div>
                         <div class="app-nav-share-item-chino" @click="copyLink">
                             <div class="app-nav-share-icon-chino app-nav-share-link-chino">
-                                <svg viewBox="0 0 1024 1024" width="32" height="32">
+                                <svg t="1763702747206" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" p-id="25932" width="32" height="32">
                                     <path
-                                        d="M574 665.4a8 8 0 0 0-11.3 0L440.3 788a32 32 0 0 1-45.3 0L236 629a32 32 0 0 1 0-45.3l159-159.3a8 8 0 0 0 0-11.3l-45.2-45.3a8 8 0 0 0-11.3 0L179.4 527a96 96 0 0 0 0 135.9l159 159.3a96 96 0 0 0 135.9 0l159-159.3a8 8 0 0 0 0-11.3l-45.3-45.2zM844.6 361.4l-159-159.3a96 96 0 0 0-135.9 0l-159 159.3a8 8 0 0 0 0 11.3l45.3 45.3a8 8 0 0 0 11.3 0l159-159.3a32 32 0 0 1 45.3 0l159 159.3a32 32 0 0 1 0 45.3l-159 159.3a8 8 0 0 0 0-135.9z"
-                                        fill="#4b424c" />
+                                        d="M783.530667 662.869333L723.2 602.453333l60.330667-60.330666a213.333333 213.333333 0 1 0-301.696-301.696L421.504 300.8 361.130667 240.469333 421.546667 180.138667a298.666667 298.666667 0 0 1 422.4 422.4l-60.373334 60.330666z m-120.661334 120.661334l-60.373333 60.330666a298.666667 298.666667 0 0 1-422.4-422.4l60.373333-60.330666L300.8 421.546667l-60.330667 60.330666a213.333333 213.333333 0 1 0 301.696 301.696l60.330667-60.330666 60.373333 60.330666z m-30.208-452.565334l60.373334 60.373334-301.696 301.653333-60.373334-60.330667 301.696-301.653333z"
+                                        p-id="25933" fill="#4671bb"></path>
                                 </svg>
                             </div>
-                            <span>复制链接</span>
+                            <span>Copy Link</span>
                         </div>
                     </div>
                 </div>
@@ -237,40 +227,22 @@ const applyTheme = () => {
         const html = document.documentElement;
         // 1. 获取背景图片元素
         const bgElement = document.querySelector('.app-background-chino');
-
         if (colorMode.value === 'dark') {
             // --- 父元素 (全局) 滤镜 ---
             html.style.filter = 'invert(0.95) hue-rotate(180deg) brightness(0.9) contrast(0.9)';
-
             html.classList.add('is-dark-mode-global');
             html.style.colorScheme = 'dark';
-
-            // --- 关键修复开始 ---
-
-            // A. 防止背景图片消失：强制让 body 背景透明
-            // 原因：html 反色后，body 默认的白色背景会变成不透明的深灰色，可能盖住位于底层的背景图。
-            document.body.style.backgroundColor = 'transparent';
-
-            // B. 还原背景图片颜色：负负得正
             if (bgElement) {
                 // 再次反转 0.95 + 旋转 180度 = 还原颜色
                 // 亮度/对比度放大 1.11倍 (1/0.9) = 抵消变暗
                 bgElement.style.filter = 'invert(0.95) hue-rotate(180deg) brightness(1.11) contrast(1.11)';
-
-                // 强制开启 GPU 硬件加速，防止滤镜导致的渲染层级丢失
                 bgElement.style.transform = 'translateZ(0)';
             }
-            // --- 关键修复结束 ---
-
         } else {
             // --- 恢复正常模式 ---
             html.style.filter = '';
             html.classList.remove('is-dark-mode-global');
             html.style.colorScheme = '';
-
-            // 清除 body 的强制透明
-            document.body.style.backgroundColor = '';
-
             // 清除背景图的滤镜
             if (bgElement) {
                 bgElement.style.filter = '';
@@ -327,19 +299,81 @@ const openApp = (scheme, fallback = null) => {
 }
 
 // Share functions
-const shareToQQ = () => { const { url, title, desc } = getPageInfo(); openApp(`mqqapi://share/qq_share?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&desc=${encodeURIComponent(desc)}`, `https://connect.qq.com/widget/shareqq/index.html?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(desc)}`); showShareModal.value = false }
-const shareToQzone = () => { const { url, title, desc } = getPageInfo(); openApp(`mqqapi://share/to_qzone?src_type=web&url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(desc)}`, `https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(desc)}`); showShareModal.value = false }
-const shareToWeibo = () => { const { url, title } = getPageInfo(); openApp(`sinaweibo://sendweibo?content=${encodeURIComponent(title + ' ' + url)}`, `https://service.weibo.com/share/share.php?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`); showShareModal.value = false }
-const shareToWechat = () => { const { url } = getPageInfo(); isMobile() ? (openApp(`weixin://share/${encodeURIComponent(url)}`), setTimeout(() => showShareTip('请使用微信扫一扫功能分享当前页面'), 2500)) : showShareTip('请使用微信扫一扫功能分享当前页面'); showShareModal.value = false }
-const shareToMoments = () => { if (isMobile()) { openApp(`weixin://share/moments/${encodeURIComponent(window.location.href)}`); setTimeout(() => showShareTip('请在微信中打开页面，点击右上角菜单分享到朋友圈'), 2500) } else { showShareTip('请在微信中打开页面，点击右上角菜单分享到朋友圈') } showShareModal.value = false }
-const copyLink = async () => { if (process.client) { try { await navigator.clipboard.writeText(window.location.href); showShareTip('链接已复制到剪贴板') } catch (err) { const ta = document.createElement('textarea'); ta.value = window.location.href; document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta); showShareTip('链接已复制到剪贴板') } } showShareModal.value = false }
+const shareToQQ = () => {
+    const {
+        url,
+        title,
+        desc
+    } = getPageInfo();
+    openApp(`mqqapi://share/qq_share?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&desc=${encodeURIComponent(desc)}`, `https://connect.qq.com/widget/shareqq/index.html?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(desc)}`);
+    showShareModal.value = false
+}
+const shareToQzone = () => {
+    const {
+        url,
+        title,
+        desc
+    } = getPageInfo();
+    openApp(`mqqapi://share/to_qzone?src_type=web&url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(desc)}`, `https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}&summary=${encodeURIComponent(desc)}`);
+    showShareModal.value = false
+}
+const shareToWeibo = () => {
+    const {
+        url,
+        title
+    } = getPageInfo();
+    openApp(`sinaweibo://sendweibo?content=${encodeURIComponent(title + ' ' + url)}`, `https://service.weibo.com/share/share.php?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`);
+    showShareModal.value = false
+}
+const shareToWechat = () => {
+    const {
+        url
+    } = getPageInfo();
+    isMobile() ? (openApp(`weixin://share/${encodeURIComponent(url)}`), setTimeout(() => showShareTip('请使用微信扫一扫功能分享当前页面'), 2500)) : showShareTip('请使用微信扫一扫功能分享当前页面');
+    showShareModal.value = false
+}
+const shareToMoments = () => {
+    if (isMobile()) {
+        openApp(`weixin://share/moments/${encodeURIComponent(window.location.href)}`);
+        setTimeout(() => showShareTip('请在微信中打开页面，点击右上角菜单分享到朋友圈'), 2500)
+    } else {
+        showShareTip('请在微信中打开页面，点击右上角菜单分享到朋友圈')
+    }
+    showShareModal.value = false
+}
+const copyLink = async () => {
+    if (process.client) {
+        try {
+            await navigator.clipboard.writeText(window.location.href);
+            showShareTip('链接已复制到剪贴板')
+        } catch (err) {
+            const ta = document.createElement('textarea');
+            ta.value = window.location.href;
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+            showShareTip('链接已复制到剪贴板')
+        }
+    }
+    showShareModal.value = false
+}
 
 const showShareTip = (message) => {
     const tip = document.createElement('div')
     tip.style.cssText = `position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0, 0, 0, 0.8); color: white; padding: 12px 20px; border-radius: 8px; font-size: 14px; z-index: 10000; max-width: 80%; text-align: center; animation: fadeIn 0.3s ease;`
     tip.textContent = message
-    const style = document.createElement('style'); style.textContent = `@keyframes fadeIn { from { opacity: 0; transform: translate(-50%, -50%) scale(0.9); } to { opacity: 1; transform: translate(-50%, -50%) scale(1); } }`; document.head.appendChild(style); document.body.appendChild(tip)
-    setTimeout(() => { tip.style.animation = 'fadeIn 0.3s ease reverse'; setTimeout(() => { document.body.removeChild(tip); document.head.removeChild(style) }, 300) }, 2000)
+    const style = document.createElement('style');
+    style.textContent = `@keyframes fadeIn { from { opacity: 0; transform: translate(-50%, -50%) scale(0.9); } to { opacity: 1; transform: translate(-50%, -50%) scale(1); } }`;
+    document.head.appendChild(style);
+    document.body.appendChild(tip)
+    setTimeout(() => {
+        tip.style.animation = 'fadeIn 0.3s ease reverse';
+        setTimeout(() => {
+            document.body.removeChild(tip);
+            document.head.removeChild(style)
+        }, 300)
+    }, 2000)
 }
 </script>
 
@@ -574,13 +608,13 @@ const showShareTip = (message) => {
     }
 
     .appearance-box-chino {
-        background-color: rgba(238, 247, 255, 0.8);
+        background-color: rgba(70, 113, 187, 0.1);
         border-radius: 12px;
         padding: 15px 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        color: #555;
+        color: #4671bb;
         font-size: 15px;
         font-weight: 500;
     }
@@ -636,7 +670,6 @@ const showShareTip = (message) => {
 }
 
 .app-nav-share-container-chino {
-    background: #f3f2f4;
     border-radius: 16px;
     width: 320px;
     max-height: 400px;
@@ -649,7 +682,6 @@ const showShareTip = (message) => {
     justify-content: space-between;
     align-items: center;
     padding: 16px 20px;
-    border-bottom: 1px solid #dedef0;
     background: #4671bb;
 }
 
@@ -657,7 +689,7 @@ const showShareTip = (message) => {
     margin: 0;
     padding: 0;
     font-size: 18px;
-    color: #f3f2f4;
+    color: #f4f3f5;
     font-weight: 500;
 }
 
@@ -666,7 +698,7 @@ const showShareTip = (message) => {
     border: none;
     font-size: 24px;
     cursor: pointer;
-    color: #f3f2f4;
+    color: #f4f3f5;
     padding: 0;
     width: 28px;
     height: 28px;
@@ -678,6 +710,7 @@ const showShareTip = (message) => {
 }
 
 .app-nav-share-content-chino {
+    background-color: rgba(164, 198, 255, 0.2);
     padding: 20px;
 }
 
@@ -705,7 +738,7 @@ const showShareTip = (message) => {
     align-items: center;
     justify-content: center;
     margin-bottom: 8px;
-    background: #f3f2f4;
+    background: #f4f3f5;
     transition: all 0.3s ease;
 }
 
@@ -741,7 +774,7 @@ const showShareTip = (message) => {
     color: #2a4d8a;
 }
 
-@media (max-width: 480px) {
+@media (max-aspect-ratio: 1/1) {
     .app-nav-share-container-chino {
         width: 280px;
     }

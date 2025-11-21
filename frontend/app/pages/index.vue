@@ -19,6 +19,12 @@
     </div>
 </template>
 
+<script setup>
+useHead({
+    title: computed(() => `CHINO's Blog`)
+});
+</script>
+
 <style>
 .app-main-chino {
     display: grid;
